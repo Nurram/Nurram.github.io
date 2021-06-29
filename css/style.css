@@ -54,6 +54,23 @@ body {
     font-size: 1rem;
     box-sizing: border-box;
 }
+/* Audio button*/
+.audio-play {
+    width: 3rem;
+    height: 3rem;
+    background-color: seagreen;
+    color: white;
+    display: none;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 9999;
+}
+.audio-play i {
+   margin-top: 1rem;
+}
 /*Header Section */
 .header {
     width: 100%;
