@@ -21,6 +21,7 @@ html {
 }
 body {
     font-family: 'Noto Sans JP';
+    overflow: hidden;
 }
 .overlay-dark {
     box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.5);
@@ -53,6 +54,33 @@ body {
     padding: .5rem;
     font-size: 1rem;
     box-sizing: border-box;
+}
+/* Pppup Section */
+.popup {
+    width: 100%;
+    height: 100%;
+    background-image: url('../res/header.jpg');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    color: white;
+}
+.popup a {
+    color: white;
+    padding: .5rem;
+    margin: 1rem;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: .5s;
+}
+.popup a:hover {
+    background-color: rgba(255, 255, 255, .2);
 }
 /* Audio button*/
 .audio-play {
