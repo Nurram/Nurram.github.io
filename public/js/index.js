@@ -49,6 +49,8 @@ postComment = (name, comment) => {
     }).then(() => { console.log('haha') });
 }
 window.onload = () => {
+    window.scrollTo(0, 0);
+
     const openBtn = document.getElementById('openBtn');
     const popUp = document.getElementById('popUp');
     const audio = document.getElementById('audio');
