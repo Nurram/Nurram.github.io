@@ -294,7 +294,10 @@ article {
     width: 100%;
     display: block;
 }
-
+#comment-list {
+    max-height: 45vh;
+    overflow: auto;
+}
 /*Footer Section */
 footer {
     width: 100%;

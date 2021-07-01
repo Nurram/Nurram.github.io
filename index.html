@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Montserrat:400,700">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -24,14 +24,14 @@
     </section>
 
     <div class="wrapper">
-        <section class="header overlay-dark white-text" style="background-image: url('res/header.jpg');">
+        <section class="header overlay-dark white-text" style="background-image: url('public/res/header.jpg');">
             <div class="lead" data-aos="fade-down" data-aos-duration="1500">The Wedding Of</div>
             <h1 data-aos="zoom-in" data-aos-duration="1500">Febiana & Silvy</h1>
             <div class="lead" data-aos="fade-up" data-aos-duration="1500">#We Are Married!</div>
             <p data-aos="fade-up" data-aos-duration="1900">21 . 08 . 2021</p>
         </section>
 
-        <section class="meet" style="background-image: url('res/meet.jpg');">
+        <section class="meet" style="background-image: url('public/res/meet.jpg');">
             <h2 class="text-center section-title" data-aos="fade-down" data-aos-duration="1500">Our Story Started With
             </h2>
             <p class="text-center" data-aos="fade-down" data-aos-duration="1500">"Lorem ipsum dolor sit amet
@@ -147,44 +147,34 @@
         <section class="comment overlay-dark"
             style="background-image: url(https://storage.wedew.id/uploads/public/605/b83/f52/thumb_1359986_1600_1600_0_0_auto.jpg);">
 
-            <div class="comment-content">
+            <div id="comment-content" class="comment-content">
                 <h3 class="section-title text-center">Comment</h3>
                 <form action="#" method="post">
-                    <input class="input" type="text" name="name" id="name" placeholder="Your name">
-                    <textarea class="input" name="commentVal" id="commentVal" rows="5"
+                    <input id="name" class="input" type="text" name="name" id="name" placeholder="Your name">
+                    <textarea id="comment" class="input" name="commentVal" id="commentVal" rows="5"
                         placeholder="Pray for us please"></textarea>
-                    <input class="input" type="button" value="Submit">
+                    <input id="submitBtn" class="input" type="button" value="Submit">
                 </form>
+
+                <div id="comment-list"></div>
             </div>
-        </section> -->
+        </section>
 
         <footer>
             <p class="text-center">Created with <span>&hearts;</span> by Nurram</p>
         </footer>
     </div>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script>
-        window.onload = () => {
-
-            var openBtn = document.getElementById('openBtn');
-            var popUp = document.getElementById('popUp');
-            var audio = document.getElementById('audio');
-            openBtn.addEventListener('click', () => {
-                popUp.removeAttribute('data-aos')
-                popUp.classList.remove('aos-animate');
-                popUp.setAttribute('data-aos', 'fade-down');
-                audio.play();
-
-                setTimeout(function () {
-                    AOS.init();
-                    popUp.style.display = 'none';
-                    document.body.style.overflowY = 'auto';
-                }, 500);
-            });
-        }
-    </script>
+    <script src="public/js/index.js"></script>
 </body>
 
 </html>
