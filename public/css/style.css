@@ -56,8 +56,35 @@ body {
     box-sizing: border-box;
 }
 .wrapper {
+    display: none;
     overflow-x: hidden;
 }
+@-webkit-keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateY(0);
+    }
+ }
+ 
+ @keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+ 
+ .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+ }
 /* Popup Section */
 .popup {
     width: 100%;
@@ -71,8 +98,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: .5s;
+    /* transition: .5s; */
     color: white;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
 }
 .popup a {
     color: white;
@@ -246,6 +277,7 @@ article {
     border: 1px solid blue;
     color: blue;
     padding: .5rem;
+    cursor: pointer;
 }
 .agenda > p:nth-child(6) {
     margin-top: 1.5rem;

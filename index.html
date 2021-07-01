@@ -17,13 +17,13 @@
 <body>
     <audio loop id="audio" src="public/res/song.mp3"></audio>
 
-    <section id="popUp" class="popup overlay-dark">
-        <h2 class="section-title">Dear Increzator,</h2>
+    <section id="popUp" class="popup overlay-dark fadeInDown">
+        <h2 id="headerText" class="section-title">Dear Increzator,</h2>
         <p>You are invited</p>
         <a id="openBtn">Open Invitation</a>
     </section>
 
-    <div class="wrapper">
+    <div id="wrapper" class="wrapper">
         <section class="header overlay-dark white-text" style="background-image: url('public/res/header.jpg');">
             <div class="lead" data-aos="fade-down" data-aos-duration="1500">The Wedding Of</div>
             <h1 data-aos="zoom-in" data-aos-duration="1500">Febiana & Silvy</h1>
@@ -98,7 +98,7 @@
 
             <div class="married-content" data-aos="fade-up" data-aos-duration="1500">
                 <article class="couple">
-                    <img class="circle" src="res/pp.jpg" alt="">
+                    <img class="circle" src="public/res/pp.jpg" alt="">
                     <h3 class="section-subtitle text-center">Febiana Nur Ramdani, S.Kom.</h3>
                     <p class="text-center">1st son of</br>H. Adang Surahman, S.Kep., Ners. and Hj. Lilis Yulianti, S.ST.
                     </p>
@@ -107,7 +107,7 @@
                 <h3 class="section-subtitle text-center" data-aos="fade-up" data-aos-duration="1500">&</h3>
 
                 <article class="couple" data-aos="fade-up" data-aos-duration="1500">
-                    <img class="circle" src="res/kebo.jpg" alt="">
+                    <img class="circle" src="public/res/kebo.jpg" alt="">
                     <h3 class="section-subtitle text-center">Silvy Wahyuni, S.Sn.</h3>
                     <p class="text-center">2nd daughter of</br>H. jae Juarsa, S.Pd., M.Pd. and Hj. Ita Karnita, S.Pd.
                     </p>
@@ -129,10 +129,13 @@
             <p data-aos="fade-up" data-aos-duration="1500">11.00 - 12.30</p>
             <button data-aos="fade-up" data-aos-duration="1500">Add to calender</button>
             <p data-aos="fade-up" data-aos-duration="1500">IAIC Building</p>
-            <p data-aos="fade-up" data-aos-duration="1500">Jalan Muktamar NU XXIX No.1, Cipakat, Cipasung, Singaparna,
-                Cipakat, Kec. Singaparna, Tasikmalaya, Jawa Barat
-                46417</p>
-            <button data-aos="fade-up" data-aos-duration="1500">Open Map</button>
+            <div class="location" data-aos="fade-up" data-aos-duration="1500">
+                <p>Jalan Muktamar NU XXIX No.1, Cipakat, Cipasung,
+                    Singaparna,
+                    Cipakat, Kec. Singaparna, Tasikmalaya, Jawa Barat
+                    46417</p>
+                <button id="openMap">Open Map</button>
+            </div>
         </section>
 
         <section class="pandemic overlay-dark"

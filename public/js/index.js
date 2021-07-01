@@ -46,26 +46,37 @@ postComment = (name, comment) => {
         name: name,
         comment: comment,
         date: datetime
-    }).then(() => { console.log('haha') });
+    });
 }
 window.onload = () => {
-    window.scrollTo(0, 0);
+    const destinedFor = document.getElementById('headerText');
+    let destination = getParameterByName('untuk');;
 
-    const openBtn = document.getElementById('openBtn');
+    if (destination === '' || destination === null) {
+        destination = 'Guest'
+    }
+
+    destinedFor.textContent = `Dear ${destination},`;
+
     const popUp = document.getElementById('popUp');
     const audio = document.getElementById('audio');
+    const openBtn = document.getElementById('openBtn');
     openBtn.addEventListener('click', () => {
         popUp.removeAttribute('data-aos')
-        popUp.classList.remove('aos-animate');
-        popUp.setAttribute('data-aos', 'fade-down');
+        popUp.classList.remove('fadeInDown');
         audio.play();
 
-        setTimeout(function () {
-            AOS.init();
-            popUp.style.display = 'none';
-            document.body.style.overflowY = 'auto';
-        }, 500);
+        document.getElementById('wrapper').style.display = 'block';
+        AOS.init();
+        popUp.style.display = 'none';
+        document.body.style.overflowY = 'auto';
     });
+
+    const openMapBtn = document.getElementById('openMap');
+    openMapBtn.addEventListener('click', () => {
+        window.open('https://www.google.com/maps/place/Institut+Agama+Islam+Cipasung/@-7.3496343,108.127125,15z/data=!4m5!3m4!1s0x0:0x9eb404166b256d11!8m2!3d-7.3496343!4d108.127125',
+            '_blank').focus();
+    })
 
     const submitBtn = document.getElementById('submitBtn');
     submitBtn.addEventListener('click', async () => {
@@ -79,4 +90,12 @@ window.onload = () => {
             location.reload();
         }
     })
+}
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
