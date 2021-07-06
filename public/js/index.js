@@ -59,6 +59,11 @@ function getParameterByName(name, url = window.location.href) {
 window.onload = () => {
     const popUp = document.getElementById('popUp');
     const audio = document.getElementById('audio');
+
+    const waitText = document.getElementById('waitText');
+    waitText.style.display = 'none';
+    waitText.style.marginTop = '1rem';
+
     const openBtn = document.getElementById('openBtn');
     openBtn.style.display = 'inline-block';
     openBtn.addEventListener('click', () => {
