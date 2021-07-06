@@ -220,17 +220,13 @@ article {
     object-fit: cover;
     margin: 4rem auto 1rem auto;
 }
-.couple .section-subtitle {
-    margin-bottom: .5rem !important;
-}
 .couple p {
     margin: 0 1rem;
     font-size: .9rem;
 }
-.married > .section-subtitle {
-    font-size: 6rem;
+.married-content > .section-subtitle {
+    margin-top: 4rem;
 }
-
 @media (min-width: 768px) {
     .married-content {
         display: flex;
