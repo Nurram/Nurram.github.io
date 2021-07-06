@@ -78,6 +78,14 @@ window.onload = () => {
             '_blank').focus();
     })
 
+    const addToMapBtn = document.getElementById('addToCalendarBtn');
+    addToMapBtn.addEventListener('click', () => {
+        var text = 'Silvy and Febiana Wedding';
+        var date = '21082021'
+        var location = 'Institut Agama Islam Cipasung'
+        var googleCalendarUrl = `http://www.google.com/calendar/event?action=TEMPLATE&text=${text}&dates=${date}/${date}&location=${location}`;
+        window.open(googleCalendarUrl).focus();
+    });
     const submitBtn = document.getElementById('submitBtn');
     submitBtn.addEventListener('click', async () => {
         const name = document.getElementById('name').value;
