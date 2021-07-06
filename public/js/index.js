@@ -12,7 +12,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 const ref = database.ref('comments');
-ref.child('7').child('1').get().then((snapshot) => {
+ref.get().then((snapshot) => {
     if (snapshot.exists()) {
         const data = snapshot.val();
 
@@ -35,32 +35,32 @@ ref.child('7').child('1').get().then((snapshot) => {
             div.appendChild(date);
             div.appendChild(document.createElement('hr'));
         }
-    } else {
-        console.log("No data available");
     }
 });
-postComment = (name, comment) => {
-    const datetime = new Date().toLocaleString();
 
-    ref.child(datetime).set({
-        name: name,
-        comment: comment,
-        date: datetime
-    });
+const destinedFor = document.getElementById('headerText');
+let destination = getParameterByName('untuk');;
+
+if (destination === '' || destination === null) {
+    destination = 'Guest'
 }
+
+destinedFor.textContent = `Dear ${destination},`;
+
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
 window.onload = () => {
-    const destinedFor = document.getElementById('headerText');
-    let destination = getParameterByName('untuk');;
-
-    if (destination === '' || destination === null) {
-        destination = 'Guest'
-    }
-
-    destinedFor.textContent = `Dear ${destination},`;
-
     const popUp = document.getElementById('popUp');
     const audio = document.getElementById('audio');
     const openBtn = document.getElementById('openBtn');
+    openBtn.style.display = 'inline-block';
     openBtn.addEventListener('click', () => {
         popUp.removeAttribute('data-aos')
         popUp.classList.remove('fadeInDown');
@@ -83,7 +83,7 @@ window.onload = () => {
         const name = document.getElementById('name').value;
         const comment = document.getElementById('comment').value;
 
-        if (name === '' || comment === '') {
+        if (name === '' || comment === '' || name.length < 3) {
             return;
         } else {
             await postComment(name, comment);
@@ -91,11 +91,16 @@ window.onload = () => {
         }
     })
 }
-function getParameterByName(name, url = window.location.href) {
-    name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+
+postComment = async (name, comment) => {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+    const date = new Date();
+    const datetime = date.getMilliseconds();
+    const dateString = date.toLocaleString("id-ID", options);
+
+    await ref.child(`${name.slice(0, 3)}${datetime}`).set({
+        name: name,
+        comment: comment,
+        date: dateString
+    });
 }
