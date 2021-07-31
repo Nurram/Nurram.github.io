@@ -7,8 +7,8 @@ class CommentService {
     return db.orderByChild("millis");
   }
 
-  create(comment) {
-    return db.push(comment);
+  async create(comment) {
+    return await db.push(comment);
   }
 }
 
