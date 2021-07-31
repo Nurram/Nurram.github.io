@@ -1,4 +1,3 @@
-import './App.css';
 import PopUp from './components/popUp';
 import Header from './components/header';
 import Meet from './components/meet';

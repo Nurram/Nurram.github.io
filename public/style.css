@@ -15,7 +15,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 }
-/* General Property */
 html {
     scroll-behavior: smooth;
 }
@@ -85,7 +84,6 @@ body {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
  }
-/* Popup Section */
 .popup {
     width: 100%;
     height: 100%;
@@ -98,7 +96,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* transition: .5s; */
     color: white;
     -webkit-animation-duration: 1s;
             animation-duration: 1s;
@@ -117,7 +114,6 @@ body {
 .popup a:hover {
     background-color: rgba(255, 255, 255, .2);
 }
-/* Audio button*/
 .audio-play {
     width: 3rem;
     height: 3rem;
@@ -134,7 +130,6 @@ body {
 .audio-play i {
    margin-top: 1rem;
 }
-/*Header Section */
 .header {
     width: 100%;
     height: 100vh;
@@ -154,8 +149,6 @@ body {
 .header .lead {
     letter-spacing: 3px;
 }
-
-/*Meet Section */
 .meet {
     width: 100%;
     background-position: center;
@@ -167,8 +160,6 @@ body {
 .meet p {
     margin: 0 1rem;
 }
-
-/*Article Section */
 article {
     box-sizing: border-box;
     text-align: left;
@@ -199,8 +190,6 @@ article {
         order: 2;
     }
 }
-
-/*Married Section */
 .married {
     background-size: cover;
     background-position: center;
@@ -244,7 +233,6 @@ article {
         font-size: 5rem;
     }
 }
-/*Agenda Section*/
 .agenda {
     background-position: center;
     background-size: cover;
@@ -282,8 +270,6 @@ article {
     font-size: 1.1rem;
     font-weight: bold;
 }
-
-/*Pandemic Section*/
 .pandemic {
     width: 100%;
     height: 70vh;
@@ -299,8 +285,6 @@ article {
     color: white;
     margin: auto;
 }
-
-/*Comment Section*/
 .comment {
     padding: 4rem 2rem 2rem 2rem;
     color: white;
@@ -334,7 +318,6 @@ article {
 #comment-list p:nth-child(3) {
     font-size: .7rem;
 }
-/*Footer Section */
 footer {
     width: 100%;
     padding: 1rem;

@@ -39,12 +39,6 @@ class CommentForm extends Component {
         };
         
         commentService.create(data)
-          .then(() => {
-            console.log("Created new item successfully!");
-          })
-          .catch((e) => {
-            console.log(e);
-          });
       }
 
     render() {

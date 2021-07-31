@@ -47,9 +47,8 @@ class Commment extends Component {
                     <CommentForm/>
                     <div id="comment-list">
                     {
-                        comments.reverse(),
-                        comments && comments.map((data, index) => (
-                           <div>
+                        comments && comments.reverse().map((data, index) => (
+                           <div key={index}>
                                <h4>{data.name}</h4>
                                <p>{data.comment}</p>
                                <p>{data.date}</p>
