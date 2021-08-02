@@ -41,7 +41,7 @@ class Commment extends Component {
         const { comments } = this.state;
         return(
             <section className="comment overlay-dark"
-              style={{backgroundImage: "url('./res/comment.jpg')"}}>
+              style={{backgroundImage: "url('./res/comment.jpeg')"}}>
 
                 <div id="comment-content" className="comment-content">
                     <CommentForm/>

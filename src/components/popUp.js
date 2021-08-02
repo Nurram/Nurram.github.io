@@ -58,7 +58,7 @@ class PopUp extends React.Component {
                 <h2 id="headerText" className="section-title text-center">{this.state.recipient}</h2>
                 <p>You are invited</p>
                 <p ref={this.waitTxtRef}><i>Please wait...</i></p>
-                <a ref={this.openBtnRef} onClick={this.playMusic} style={{ textDecoration: 'none' }} href='/#'>Open Invitation</a>
+                <a ref={this.openBtnRef} onClick={this.playMusic} style={{ textDecoration: 'none' }}>Open Invitation</a>
             </section>
         )
     }

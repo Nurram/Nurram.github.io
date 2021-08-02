@@ -16,7 +16,7 @@ class Agenda extends Component {
     render() {
         return(
             <section className="agenda text-center"
-            style={{backgroundImage: "url('./res/agenda.jpg')"}}>
+            style={{backgroundImage: "url('./res/agenda.jpeg')"}}>
                 <p data-aos="fade-down" data-aos-duration="1500">Saturday</p>
                 <div className="date">
                     <h2 data-aos="fade-right" data-aos-duration="1500">21</h2>
