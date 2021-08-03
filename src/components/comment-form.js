@@ -33,15 +33,20 @@ class CommentForm extends React.Component {
         const date = new Date();
         const dateString = date.toLocaleString("id-ID", options);
 
-        const data = {
-          name: this.state.name,
-          comment: this.state.comment,
-          date: dateString,
-          millis: Date.now()
-        };
-        
-        await commentService.create(data);
-        this.formRef.current.reset();
+        const name = this.state.name;
+        const comment = this.state.comment;
+
+        if(name.trim() !== '' && comment.trim() !== '') {
+          const data = {
+            name: name,
+            comment: comment,
+            date: dateString,
+            millis: Date.now()
+          };
+          
+          await commentService.create(data);
+          this.formRef.current.reset();
+        }
       }
 
     render() {

@@ -10,7 +10,7 @@ import Footer from './components/footer';
 function App() {
   return (
     <div className="App">
-      <audio loop id="audio" src="./res/song.mp3"></audio>
+      <audio id="audio" src="./res/song.mp3"></audio>
       <PopUp/>
 
       <div id="wrapper" className="wrapper">

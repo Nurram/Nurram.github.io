@@ -50,7 +50,7 @@ class Commment extends Component {
                         comments && comments.reverse().map((data, index) => (
                            <div key={index}>
                                <h4>{data.name}</h4>
-                               <p>{data.comment}</p>
+                               <p style={{marginBottom: '4px'}}>{data.comment}</p>
                                <p>{data.date}</p>
                                <hr></hr>
                            </div>

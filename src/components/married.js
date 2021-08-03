@@ -7,10 +7,7 @@ class Married extends Component {
               style={{backgroundImage: "url('./res/married.jpeg')"}}>
               <h2 className="section-title text-center" data-aos="fade-down" data-aos-duration="1500">We Are Getting Married
               </h2>
-              <p className="text-center" data-aos="fade-down" data-aos-duration="1500">"Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Hic consectetur voluptas et ab
-                  ut. Dolorem maiores,
-                  illum suscipit quas perspiciatis."<br></br>Al-Qur'an 0:0</p>
+              <p className="text-center" data-aos="fade-down" data-aos-duration="1500"><q cite='QS. An-Nahl: 72'>Dan Allah menjadikan bagimu pasangan (suami atau istri) dari jenis kamu sendiri, menjadikan anak dan cucu bagimu dari pasanganmu, serta memberimu rezeki dari yang baik-baik. Mengapa mereka beriman kepada yang batil dan mengingkari nikmat Allah?.</q><br></br>(QS. An-Nahl: 72)</p>
 
               <div className="married-content" data-aos="fade-up" data-aos-duration="1500">
                   <article className="couple">

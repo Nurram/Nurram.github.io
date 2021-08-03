@@ -41,7 +41,7 @@ class Meet extends Component {
                       alt=""></img>
                   <div className="article-content white-text">
                       <h3 className="section-subtitle">"I have talked to your parents that i will propose you"</h3>
-                      <p>5 years have passed, Febiana decides and tells silvy's mother that he will propose silvy in december and tells silvy that he has spoken to her mother to propose to her.</p>
+                      <p>5 years have passed, Febiana decides and tells silvy's parents that he will propose silvy in december and tells silvy that he has spoken to her mother to propose to her.</p>
                   </div>
               </article>
           </section>
