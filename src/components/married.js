@@ -13,14 +13,14 @@ class Married extends Component {
                   <article className="couple">
                       <img className="circle" src="./res/kebo.jpeg" alt=""></img>
                       <h3 className="section-subtitle text-center">Silvy Wahyuni, S.Sn.</h3>
-                      <p className="text-center">2nd daughter of<br></br>H. Jae Juarsa, S.Pd., M.Pd. and Hj. Ita Karnita, S.Pd.
+                      <p className="text-center">2<sup>nd</sup> daughter of<br></br>H. Jae Juarsa, S.Pd., M.Pd. and Hj. Ita Karnita, S.Pd.
                       </p>
                   </article>
                   <h3 className="section-subtitle text-center">&</h3>
                   <article className="couple">
                       <img className="circle" src="./res/pp.jpeg" alt=""></img>
                       <h3 className="section-subtitle text-center">Febiana Nur Ramdani, S.Kom.</h3>
-                      <p className="text-center">1st son of<br></br>H. Adang Surahman, S.Kep.Ners. and Hj. Lilis Yulianti, S.ST.
+                      <p className="text-center">1<sup>st</sup> son of<br></br>H. Adang Surahman, S.Kep.Ners. and Hj. Lilis Yulianti, S.ST.
                       </p>
                   </article>
               </div>

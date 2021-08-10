@@ -55,10 +55,12 @@ class PopUp extends React.Component {
     render() {
         return(
             <section id="popUp" className="popup overlay-dark fadeInDown">
-                <h2 id="headerText" className="section-title text-center">{this.state.recipient}</h2>
+                <h2 className="text-center" style={{ fontSize: '1.6rem'}}>{this.state.recipient}</h2>
                 <p>You are invited</p>
+                <p>To the Wedding Celebration of</p>
+                <p style={{ fontSize: '2rem', fontFamily: 'Homemade Apple' }}>Silvy & Febiana</p>
                 <p ref={this.waitTxtRef}><i>Please wait...</i></p>
-                <a ref={this.openBtnRef} onClick={this.playMusic} style={{ textDecoration: 'none' }}>Open Invitation</a>
+                <a ref={this.openBtnRef} onClick={this.playMusic} style={{ textDecoration: 'none', position: 'absolute', bottom: '14rem' }}>Open Invitation</a>
             </section>
         )
     }

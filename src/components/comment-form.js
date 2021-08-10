@@ -52,7 +52,7 @@ class CommentForm extends React.Component {
     render() {
         return(
             <div>
-                <h3 className="section-title text-center">Comment</h3>
+                <h3 className="section-title text-center">Send Wishes</h3>
                 <form ref={this.formRef} action="#" method="post">
                     <input id="name" className="input" type="text" name="name" placeholder="Your name" onChange={this.onChangeName} required></input>
                     <textarea id="comment" className="input" name="commentVal" rows="5"
